@@ -1,0 +1,56 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(400);
+  noStroke();
+  
+  colorMode(HSB, 100);
+  fill(0,100,100);
+  
+ 
+  colorMode(HSB, 100);
+  fill(80,80,90);
+  
+  let current_minute= minute();
+
+  let xb = map( minute(), 0, 60, 0, 100);
+  fill(xb, 40,80);
+  
+  text(current_minute,20,180);
+  
+  let bh = map(minute(), 0, 60, 0, width - 50  );
+  
+  rect(bh,220,50,50);
+  
+  
+  colorMode(HSB, 100);
+  fill(0,90,10);
+  
+  let current_hour= hour();
+
+  let ch = map( hour(), 90, 600, 0, 100);
+  fill(ch, 70,80);
+  
+  text(current_hour,10,70);
+  
+  let jk = map(hour(), 0, 60, 0, width - 50  );
+  
+  rect(bh,100,50,50);
+  
+   let current_second = second();
+
+  
+  let xh = map( second(), 0, 60, 0, 100);
+  fill(xh, 20, 0);
+  
+  text(current_second,20,310);
+  
+  let xs = map(second(), 0, 60, 0, width - 50  );
+  
+  rect(xs,340,50,50);
+
+
+}
+  
